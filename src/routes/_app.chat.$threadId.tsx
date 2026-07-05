@@ -141,7 +141,7 @@ function ChatInner({ threadId, initial, threads, onNew, onArchive, onDelete, lan
     id: threadId,
     messages: initial,
     transport: new DefaultChatTransport({
-      api: "/api/chat",
+      api: "https://web-production-8fe14.up.railway.app/api/chat",
       headers: async (): Promise<Record<string, string>> => {
         const { data } = await supabase.auth.getSession();
         const token = data.session?.access_token ?? authToken;

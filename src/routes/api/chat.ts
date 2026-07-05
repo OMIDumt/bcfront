@@ -5,7 +5,7 @@ import { z } from "zod";
 import { createClient } from "@supabase/supabase-js";
 import { getCoach } from "@/lib/coaches";
 
-export const Route = createFileRoute("/api/chat")({
+export const Route = createFileRoute("https://web-production-8fe14.up.railway.app/api/chat")({
   server: {
     handlers: {
       POST: async ({ request }) => {
